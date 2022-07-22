@@ -1,0 +1,416 @@
+<!--Laern array-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <style>
+        .container1 {
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            overflow-x: auto;
+          }
+          
+          .language {
+            align-items: center;
+            color: white;
+            background-color: #2c9ac9;
+            padding: 12px 16px;
+            border-radius: 5px 5px 0 0;
+            text-align: right;
+          }
+          
+          .code-box {
+            position: center;
+          }
+          
+          .code-box pre {
+            background-color: #2c9ac9;
+            align-items: center;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 0 0 5px 5px;
+          }
+          
+          .hljs {
+            background-color: transparent;
+          }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>ARRAY</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Topicwise Problem set
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/array">Arrays</a>
+              <a class="dropdown-item" href="/llist/">Linked list</a>
+              <a class="dropdown-item" href="/greedy/">Greedy algorithm</a>
+              <a class="dropdown-item" href="/rec/">Recursion</a>
+              <a class="dropdown-item" href="/backt/">Backtarcking</a>
+              <a class="dropdown-item" href="/bsearch/">Binary Search</a>
+              <a class="dropdown-item" href="/heap/">Heap</a>
+              <a class="dropdown-item" href="/stque/">Stacks and Queues</a>
+              <a class="dropdown-item" href="/str/">Strings</a>
+              <a class="dropdown-item" href="/bt/">Binary Trees</a>
+              <a class="dropdown-item" href="/bst/">Binary Search Trees</a>
+              <a class="dropdown-item" href="/grp/">Graph</a>
+              <a class="dropdown-item" href="/dp/">DP</a>
+              <a class="dropdown-item" href="/trie/">Trie</a>
+            </div>
+      
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <center><h1>Learn Array</h1></center>
+    <br>
+
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Insertion
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="container1" id="csni">
+                <p>Language</p>
+                <div class="code-box">
+                    <pre>
+                        <code id="code">
+// Insertion in an array at some index ind
+void insertAtI(int *arr, int ind, int num){
+    int count=0;
+
+    for(int j=n; j>=ind; j--){
+        arr[j+1]=arr[j];
+    }
+    arr[ind]=num;
+}
+// Insert in an array after some value 
+
+void insertAfterI(int *arr, int I, int num){
+    for (int i=0; i< n; i++){
+        if (arr[i]==I){
+            int ans=i;
+        }
+    }
+    insertAtI(arr, ans+1, num);
+}
+//creating an array in main function
+//array of size 2n is defined to perform insertion operations
+
+//after every insertion call in main function increase n by 1
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Deletion
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="container1" id="csni">
+                <p>Language</p>
+                <div class="code-box">
+                    <pre>
+                        <code id="code">
+// Deletion at index i
+void deletionAtI(int *arr, int i){
+    for(int j=i; j< n; j++){
+        arr[j]=arr[j+1];
+    }
+}
+
+//deletion after value num
+
+void deletionAfter(int *arr, int num){
+    int ans;
+    for(int i=0; i< n; i++){
+        if (arr[i]==num){
+            ans=i;
+        }
+    }
+    deletionAtI(arr, ans+1);
+}
+
+//deleting value num
+
+void deletionOf(int *arr, int num){
+    int ans;
+    for(int i=0; i< n; i++){
+        if (arr[i]==num){
+            ans=i;
+        }
+    }
+    deletionAtI(arr, ans);
+}
+//creating an array in main function
+//array of size 2n is defined to perform insertion operations
+
+//after every deletion call main function decrease n by 1
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Sorting using mergesort
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="container1" id="csni">
+                <p>Language</p>
+                <div class="code-box">
+                    <pre>
+                        <code id="code">
+#include< stdio.h>
+    void merge(int *arr, int s, int e){
+        int mid=(s+e)/2;
+        int m=mid+1-s;
+        int n=e-mid;
+        int M[m], N[n];
+        int x=s;
+        for(int i=0; i< m; i++){
+            M[i]=arr[x++];
+        }
+    
+        x=mid+1;
+        for(int i=0; i< n; i++){
+            N[i]=arr[x++];
+        }
+    
+        int i=0;
+        int j=0;
+        int c=s;
+        while(i< m && j< n){
+            if(M[i]< N[j]){
+                arr[c++]=M[i++];
+            }
+            else{
+                arr[c++]=N[j++];
+            }
+        }
+    
+        while(i< m){
+            arr[c++]=M[i++];
+        }
+        while(j< n){
+            arr[c++]=N[j++];
+        }
+    }
+    
+    void mergesort(int *arr, int s, int e){
+        int mid=(s+e)/2;
+        if(s>=e){
+            return;
+        }
+        mergesort(arr, s, mid);
+        mergesort(arr, mid+1, e);
+    
+        merge(arr, s, e);
+    }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="card">
+  <div class="card-header" id="headingfour">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+        Searching using binary Search
+      </button>
+    </h5>
+  </div>
+  <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+    <div class="container1" id="csni">
+        <p>Language</p>
+        <div class="code-box">
+            <pre>
+                <code id="code">
+// You need to sort the array first
+
+int binarySearch(int *arr,int s, int e int x){
+    if(s>=e){
+        return -1
+    }
+    int mid=(s+e)/2
+    if(arr[mid]==x){
+        return mid;
+    }
+    if(arr[mid]>x){
+        binarySearch(arr, s, mid, x);
+    }else{
+        binarySearch(arr, mid+1, e, x);
+    }
+}
+                    
+
+                </code>
+            </pre>
+        </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<div class="card">
+    <div class="card-header" id="headingfive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+          Max sum contiguous subarray using kadane's algo
+        </button>
+      </h5>
+    </div>
+    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
+      <div class="container1" id="csni">
+          <p>Language</p>
+          <div class="code-box">
+              <pre>
+                  <code id="code">
+#include< stdio.h>
+#include < limits.h>
+
+    
+int kadane(int *arr, int n){
+    int curr=0;
+    int max= INT_MIN;
+
+    for(int i=0; i< n; i++){
+        curr+=arr[i];
+
+        if(curr< 0){
+            curr=0;
+        }
+        if(max< curr){
+            max=curr;
+        }
+    }
+    return max;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[2*n];
+
+    for(int i=0; i< n; i++){
+        scanf("%d", &arr[i]);
+    }
+    printf("%d", kadane(arr,n));
+
+}
+                      
+  
+                  </code>
+              </pre>
+          </div>
+      </div>
+  
+    </div>
+  </div>
+  </div>
+  
+
+
+
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Notes" aria-label="NOTES" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary">SUBMIT</button>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>var x=25</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <br>
+  <br>
+  <footer class="bg-dark text-center text-white">
+      <section class="mb-4">
+        <p>
+            <br>
+            This website is created by Kuber Budhija
+        </p>
+      </section>
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+
+      </section>
+ 
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+    </div>
+
+  </footer>
+</html>
